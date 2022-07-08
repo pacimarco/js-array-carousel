@@ -6,20 +6,25 @@ const itemsDom = document.querySelector(".items");
 
 for (let i = 0; i < imagesArray.length; i++) {
     itemsDom.innerHTML += `<div class="item">
-                            <img class=img-slide" src="${imagesArray[i]}" alt=""/>
+                            <img class="img-slide" src="${imagesArray[i]}" alt=""/>
                             </div>`;
 }
 
-const itemList = document.getElementsByClassName(".item");
+const itemList = document.getElementsByClassName("item");
 
-itemList[0].classList.add("show");
+//const collection = document.getElementsByClassName("example");
+
+console.log(itemList)
+itemList[currentImage].classList.add("show");
 console.log(itemList);
 console.log(itemList[0]);
-console.log(show);
+
 
 const next = document.querySelector(".next");
 
-next.addEventListener("click"), function () {
+next.addEventListener("click", function () {
+
+    //document.getElementById("myBtn").addEventListener("click", displayDate);
     itemList[currentImage].classList.remove("show");
     currentImage++;
     itemList[currentImage].classList.add("show");
@@ -28,10 +33,10 @@ next.addEventListener("click"), function () {
     if (currentImage === itemList.length - 1) {
         next.classList.add("hidden");
     }
-}
+})
 
 const prev = document.querySelector(".prev");
-prev.addEventListener("click"), function () {
+prev.addEventListener("click", function () {
     itemList[currentImage].classList.remove("show");
     currentImage--;
     itemList[currentImage].classList.add("show");
@@ -40,4 +45,4 @@ prev.addEventListener("click"), function () {
     if (currentImage === 0) {
         prev.classList.add("hidden");
     }
-}
+})

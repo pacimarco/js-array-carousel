@@ -17,14 +17,19 @@
 }
 
 .show{
-    display: block;
+    display: block
+    !important;
+
 }
 
 .item{
     display: none;
-    width: 90vw;
+    width: 80vw;
     height: 50vh;
+    
 }
+
+
 
 .img-slide{
     width: 100%;
