@@ -13,6 +13,9 @@ for (let i = 0; i < imagesArray.length; i++) {
 const itemList = document.getElementsByClassName(".item");
 
 itemList[0].classList.add("show");
+console.log(itemList);
+console.log(itemList[0]);
+console.log(show);
 
 const next = document.querySelector(".next");
 
